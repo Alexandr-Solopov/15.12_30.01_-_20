@@ -1,20 +1,39 @@
-﻿/*5. Напишите программу, которая на вход принимает
-одно число (N), а на выходе показывает все целые
-числа в промежутке от -N до N.
-4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
-2 -> " -2, -1, 0, 1, 2"
-Итерация №2*/
+﻿/*3. Напишите программу, которая будет выдавать
+название дня недели по заданному номеру.
+3 -> Среда
+5 -> Пятница*/
 
-Console.WriteLine("Введите целое число N");
-int number = Convert.ToInt32(Console.ReadLine());
-int startnumber = number * -1;
-while (startnumber <= number)
+Console.Write("Введите число в диапозоне от 1 до 7: ");
+string a = Console.ReadLine();
+if (a == "1")
 {
-   if (startnumber == number)
-   {
-        Console.Write($"{startnumber}");
-        break;
-   }
-   Console.Write($"{startnumber} ,");
-   startnumber = startnumber + 1;
+    Console.WriteLine("Понедельник");
+}
+else if (a == "2")
+{
+    Console.WriteLine("Вторник");
+}
+else if (a == "3")
+{
+    Console.WriteLine("Среда");
+}
+else if (a == "4")
+{
+    Console.WriteLine("Четверг");
+}
+else if (a == "5")
+{
+    Console.WriteLine("Пятница");
+}
+else if (a == "6")
+{
+    Console.WriteLine("Суббота");
+}
+else if (a == "7")
+{
+    Console.WriteLine("Воскресенье");
+}
+else
+{
+    Console.WriteLine("Нет такого числа");
 }

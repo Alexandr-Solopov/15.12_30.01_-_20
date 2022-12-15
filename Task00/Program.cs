@@ -11,3 +11,17 @@ int number = Convert.ToInt32(Console.ReadLine());
 int square = number * number;
 Console.WriteLine($"Квадрат числа {number} = {square}");
 
+
+
+if(number == 10 || number < 100)
+{
+
+}
+else if(number == 0)
+{
+
+}
+else 
+{
+
+}

@@ -14,7 +14,7 @@ int thirdNumber = Convert.ToInt32(Console.ReadLine());
 int max = firstNumber;
 
 if (max > firstNumber)
-if (max > secondNumber);
-if (max > thirdNumber);
+if (max > secondNumber)
+if (max > thirdNumber)
 Console.Write("Максимальное число: ");
 Console.Write(max);

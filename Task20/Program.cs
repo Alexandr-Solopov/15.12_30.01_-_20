@@ -1,23 +1,26 @@
-﻿/*Задача 22: Напишите программу, которая
-принимает на вход число (N) и выдаёт таблицу
-квадратов чисел от 1 до N.*/
+﻿/*Задача 20: Напишите программу, которая
+принимает на вход координаты двух точек и
+находит расстояние между ними в 2D
+пространстве.
+A (3,6); B (2,1) -> 5,09
+A (7,-5); B (1,-1) -> 7,21*/
 
+Console.WriteLine("Введите 1 координат: ");
+double x1 = Convert.ToInt32(Console.ReadLine());
+double y1 = Convert.ToInt32(Console.ReadLine());
 
+Console.WriteLine("Введите 2 координат: ");
+double x2 = Convert.ToInt32(Console.ReadLine());
+double y2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите натуральное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if(number > 0)
+double res = Hypotenuse(x1, y1, x2, y2);
+Console.WriteLine(Math.Round(res, 2, MidpointRounding.ToZero));
+
+double Hypotenuse(double xc1, double yc1, double xc2, double yc2)
 {
-    TableSquare(number);
-}
-else System.Console.WriteLine("Не натуральное число");
+    double pointX = Math.Pow(xc2 - xc1, 2);
+    double pointY = Math.Pow(yc2 - yc1, 2);
+    double res = Math.Sqrt(pointX + pointY);
 
-void TableSquare(int num)
-{
-    int count = 1;
-    while (count <= num)
-    {
-        Console.WriteLine($"{count,5} {Math.Pow(count, 2),5}");
-        count++;
-    }
+    return res;
 }

@@ -36,5 +36,6 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
             Console.WriteLine("]");
         }
     }
+    
     int[,] array2D = CreateMatrixRndInt(3, 4, -99, 99);
     PrintMatrix(array2D);

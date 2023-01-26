@@ -15,7 +15,6 @@ int lines = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов:");
 int columns = Convert.ToInt32(Console.ReadLine());
 double[,] numbers = new double[lines, columns];
-System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-En");
 FillMatrixRandomNumbers(numbers);
 PrintMatrix(numbers);
 

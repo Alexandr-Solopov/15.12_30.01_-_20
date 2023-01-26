@@ -12,3 +12,45 @@
 // 8 4 2 4
 
 // 1,7 -> такого элемента в массиве нет
+
+Console.WriteLine("Введите строку: ");
+int lines = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите столбец: ");
+int col = Convert.ToInt32(Console.ReadLine());
+
+int [,] matrix = new int [6,6];
+
+
+void PrintArray(int [,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i,j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+void FillArray(int [,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+          matr[i,j] = new Random().Next(1,10);  
+        }
+    }
+}
+FillArray(matrix);
+PrintArray(matrix);
+
+if (lines < 0 | lines > matrix.GetLength(0) - 1 | col < 0 | col > matrix.GetLength(1) - 1)
+  {
+    Console.WriteLine("Нет такого элемента ");
+  }
+else
+{
+    Console.WriteLine("элемент: " + matrix [lines,col]);
+   }
